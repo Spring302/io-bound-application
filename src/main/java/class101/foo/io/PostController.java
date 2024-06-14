@@ -16,6 +16,9 @@ public class PostController {
     @Autowired
     PostRepository postRepository;
 
+    @Autowired
+    Producer producer;
+
     // 1. 글을 작성한다.
     @PostMapping("/post")
     public Post createPost(@RequestBody Post post) {
