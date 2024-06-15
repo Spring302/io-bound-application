@@ -1,6 +1,7 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgresql
+    url: jdbc:postgresql://10.178.0.13:5432/postgresql # GCP 내부 IP
+    #    url: jdbc:postgresql://localhost:5432/postgresql
     username: postgresql
     password: postgrespassword
   jpa:
@@ -8,3 +9,9 @@ spring:
     hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
       ddl-auto: update
+  rabbitmq:
+    host: 10.178.0.14 # GCP 내부 IP
+    #    host: localhost
+    username: guest
+    password: guest
+    port: 5672
